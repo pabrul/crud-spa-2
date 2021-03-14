@@ -1,0 +1,34 @@
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/contatos">Lista de contatos</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{pageTitle}}</li>
+  </ol>
+</nav>
+
+<form #frm="ngForm" (ngSubmit)="submitForm(frm)">
+  <input type="text" class="form-control" name="id" [ngModel]="contato.id" hidden>
+  <div class="form-group">
+    <label for="txtNome">Nome</label>
+    <input type="text" class="form-control" #nome="ngModel" name="nome" [ngModel]="contato.nome" minlength="3" required>
+    <div class="text-danger" *ngIf="!nome.valid && nome.touched">
+      <div>campo obrigatório, deve ter no minímo 3 caracteres</div>
+    </div>
+  </div>
+  <div class="form-group">
+      <label for="txtEmail">E-mail</label>
+      <input type="email" class="form-control" #email="ngModel" name="email" [ngModel]="contato.email" required> 
+      <div class="text-danger" *ngIf="!email.valid && email.touched">
+        <div>campo obrigatório</div>
+      </div>
+    </div>
+  <div class="form-group">
+    <label for="txtTelefone">Telefone</label>
+    <input type="text" class="form-control" #telefone="ngModel" name="telefone" [ngModel]="contato.telefone" required>
+    <div class="text-danger" *ngIf="!telefone.valid && telefone.touched">
+      <div>campo obrigatório</div>
+    </div>
+  </div>
+  <button type="submit" [disabled]="!frm.valid" class="btn btn-primary">Gravar</button>
+</form>

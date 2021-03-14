@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <h1 class="mb-2">Deseja realmente deletar o contato?</h1>
+  <p class="lead"><strong>Nome:</strong> {{contato.nome}}</p>
+  <p class="lead"><strong>E-mail:</strong> {{contato.email}}</p>
+  <p class="lead"><strong>Telefone:</strong> {{contato.telefone}}</p>
+  <hr class="my-4">
+  <a routerLink="/contatos" class="btn btn-primary mr-3" style="width: 100px;">Não</a>
+  <button type="button" (click)="deletarContato()" class="btn btn-danger" style="width: 100px;">Sim</button>
+</div>

@@ -1,0 +1,214 @@
+
+<!-- <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Lista de contatos</li>
+    <li class="breadcrumb-item active" aria-current="page"><a routerLink="/contato/novo">Adicionar Novo</a></li>
+  </ol>
+  </nav>
+  
+  <table class="table container">    
+    <thead>
+      <tr>
+        <th scope="col" style="order:0;" >
+          <h1 class="yellow">Nome</h1>
+        </th>
+        <th scope="col" style="order:0;" ><h1 class="yellow">E-mail</h1></th>
+        <th scope="col" style="order:0;" ><h1 class="yellow">Telefone</h1></th>
+        <th scope="col" style="order:0;" ><h1 class="yellow">Editar</h1></th>
+        <th scope="col" style="order:0;" ><h1 class="yellow">Deletar</h1></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contato of filtrarContatos">
+        <td style="order:1;" >{{contato.nome}}</td>
+        <td style="order:2;" >{{contato.email}}</td>
+        <td style="order:3;" >{{contato.telefone}}</td>
+        <td style="order:4;" >
+          <a [routerLink]="['', 'contato', contato.id, 'editar']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
+        </td>
+          <td style="order:5;" >
+            <a [routerLink]="['', 'contato', contato.id, 'deletar']" class="btn btn-outline-danger btn-sm mr-2">Deletar</a>
+          </td>     
+        
+      </tr>
+    </tbody>
+  </table> -->
+
+  <main id="lista-contato" >
+  <p id="contatos" style="display:none;">contatos</p>
+		<section class="banner"  >
+			<div class="container" >
+				<h1>
+					Websites you're <br class="hide-mob" />
+					<span>not afraid</span> to share
+				</h1>
+
+				<h3>Website solutions for all your needs</h3>
+
+				<a href="#" class="button">Find out more</a>
+			</div>
+		</section>
+
+		<section id="services" class="services">
+			<div class="container">
+				<h2>Services</h2>
+				
+				<!-- <div class="services-grid">
+
+					<div class="service">
+						<figure class="img-box">
+							<img src="./assets/images/service-1.jpg" alt="Website Service" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Websites</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis beatae, cumque mollitia laudantium fugiat
+								perspiciatis saepe. Delectus praesentium numquam quas?
+							</p>
+						</div>
+					</div>
+
+					<div class="service">
+						<figure class="img-box">
+							<img src="./assets/images/service-2.jpg" alt="App Service" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Apps</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis beatae, cumque mollitia laudantium fugiat
+								perspiciatis saepe. Delectus praesentium numquam quas?
+							</p>
+						</div>
+					</div>
+					
+					<div class="service">
+						<figure class="img-box">
+							<img src="./assets/images/service-3.jpg" alt="Games Service" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Games</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis beatae, cumque mollitia laudantium fugiat
+								perspiciatis saepe. Delectus praesentium numquam quas?
+							</p>
+						</div>
+					</div>
+
+					<div class="service">
+						<figure class="img-box">
+							<img src="./assets/images/service-4.jpg" alt="Mentoring Service" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Mentoring</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis beatae, cumque mollitia laudantium fugiat
+								perspiciatis saepe. Delectus praesentium numquam quas?
+							</p>
+						</div>
+					</div>
+
+				</div> -->
+        <div id="table">
+<table class="table container-2">    
+    <thead>
+      <tr>
+        <th scope="col" style="order:0;" >
+          <h1 class="yellow">Nome</h1>
+        </th>
+        <th scope="col" style="order:0;" ><h1 class="yellow">E-mail</h1></th>
+        <th scope="col" style="order:0;" ><h1 class="yellow">Telefone</h1></th>
+        <th scope="col" style="order:0;" ><h1 class="yellow">Editar</h1></th>
+        <th scope="col" style="order:0;" ><h1 class="yellow">Deletar</h1></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contato of filtrarContatos">
+        <td style="order:1;" >{{contato.nome}}</td>
+        <td style="order:2;" >{{contato.email}}</td>
+        <td style="order:3;" >{{contato.telefone}}</td>
+        <td style="order:4;" >
+          <a [routerLink]="['', 'contato', contato.id, 'editar']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
+        </td>
+          <td style="order:5;" >
+            <a [routerLink]="['', 'contato', contato.id, 'deletar']" class="btn btn-outline-danger btn-sm mr-2">Deletar</a>
+          </td>     
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+			</div>
+		</section>
+
+		<section class="projects" id="projects">
+			<div class="container">
+				<h2>Projects</h2>
+				
+				<div class="projects-grid">
+					<div class="project">
+						<div class="content">
+							<h3>Project 1</h3>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, mollitia voluptas dolore reprehenderit nulla consectetur ipsa accusantium facilis! Cumque, voluptate!</p>
+							<a href="#" class="button">Learn more</a>
+						</div>
+					</div>
+					<div class="project">
+						<div class="content">
+							<h3>Project 2</h3>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, mollitia voluptas dolore reprehenderit nulla consectetur ipsa accusantium facilis! Cumque, voluptate!</p>
+							<a href="#" class="button">Learn more</a>
+						</div>
+					</div>
+					<div class="project">
+						<div class="content">
+							<h3>Project 3</h3>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, mollitia voluptas dolore reprehenderit nulla consectetur ipsa accusantium facilis! Cumque, voluptate!</p>
+							<a href="#" class="button">Learn more</a>
+						</div>
+					</div>
+					<div class="project">
+						<div class="content">
+							<h3>Project 4</h3>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, mollitia voluptas dolore reprehenderit nulla consectetur ipsa accusantium facilis! Cumque, voluptate!</p>
+							<a href="#" class="button">Learn more</a>
+						</div>
+					</div>
+					<div class="project">
+						<div class="content">
+							<h3>Project 5</h3>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, mollitia voluptas dolore reprehenderit nulla consectetur ipsa accusantium facilis! Cumque, voluptate!</p>
+							<a href="#" class="button">Learn more</a>
+						</div>
+					</div>
+					<div class="project">
+						<div class="content">
+							<h3>Project 6</h3>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, mollitia voluptas dolore reprehenderit nulla consectetur ipsa accusantium facilis! Cumque, voluptate!</p>
+							<a href="#" class="button">Learn more</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="center">
+					<a href="#" class="button">View more</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact" id="contact">
+			<div class="container">
+				<h2>Contact</h2>
+				
+				<form>
+					<div class="form-grid">
+						<input type="text" name="name" id="name" placeholder="Name" class="form-element" />
+						<input type="email" name="email" id="email" placeholder="Email" class="form-element" />
+						<textarea name="message" id="message" placeholder="Messsage" class="form-area"></textarea>
+					</div>
+					<div class="right-align">
+						<input type="submit" value="Send message" class="button" />
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
